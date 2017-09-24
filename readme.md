@@ -1,10 +1,7 @@
 # Highscores
 
 
-This is a basic app created with:
-
-- [Laravel 5.5](https://github.com/laravel)
-- [Bootstrap Sortable](https://github.com/drvic10k/bootstrap-sortable)
+This is a basic app created with [Laravel 5.5](https://github.com/laravel).
 
 
 ## Prerequisites
@@ -38,6 +35,6 @@ You should now have a file called `.env` in the root directory. Edit it to inclu
 
 Run the php artisan command `php artisan key:generate` to create an application key. Without it the app won't work.
 
-
-
-//TODO MIGRATIONS ETC.
+Now run `php artisan migrate:refresh --seed` to create all tables for this application, and add some example data to the application.  
+This will also add an example "admin" user with email "admin@test.com" email and password "admin".  
+Should you ever intend to use this system live, PLEASE CHANGE THE PASSWORD!
