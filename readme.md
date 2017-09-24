@@ -36,5 +36,4 @@ You should now have a file called `.env` in the root directory. Edit it to inclu
 Run the php artisan command `php artisan key:generate` to create an application key. Without it the app won't work.
 
 Now run `php artisan migrate:refresh --seed` to create all tables for this application, and add some example data to the application.  
-This will also add an example "admin" user with email "admin@test.com" email and password "admin".  
-Should you ever intend to use this system live, PLEASE CHANGE THE PASSWORD!
+This will also add an example "admin" user with email "admin@test.com", a random password, and a random API token.
