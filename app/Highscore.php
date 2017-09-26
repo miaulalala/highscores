@@ -8,7 +8,7 @@ class Highscore extends Model
 {
     protected $fillable = ['fname', 'lname', 'd_id', 'score', 'approved'];
     
-    protected $hidden = ['created_at', 'updated_at', 'approved', 'id', 'd_id'];
+    protected $hidden = ['created_at', 'updated_at', 'd_id'];
     
     public function difficulty()
     {
