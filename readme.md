@@ -40,11 +40,11 @@ Run the php artisan command `php artisan key:generate` to create an application 
 Now run `php artisan migrate:refresh --seed` to create all tables for this application, and add some example data to the application.  
 This will also add an example "admin" user with email "admin@test.com" and a random password. The password is printed on the command line.
 
-And that's it, you are now ready to use the application!
+And that's it, you are now ready to use the application.
 
-For testing please add
-    "test" : [
-            "vendor/bin/phpunit"
-        ]
+Run `composer test` to run all tests.
 
-to your `composer.json`, and `<env name="DB_CONNECTION" value="mysql"/>` to `your phpunit.xml`. Then run `composer test` to run all tests. 
+
+### Also Used
+
+[DataTables](https://datatables.net/)
