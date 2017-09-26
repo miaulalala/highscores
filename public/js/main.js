@@ -114,7 +114,7 @@ function submitScore(){
         },
         error : function(jqXHR, textStatus, errorThrown) {
             $('#message_submit').removeClass('hide').addClass('alert alert-danger alert-dismissible').slideDown().show();
-            $('#message_submit_content').html('<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>An error occured. Please reload the page and try again. <br /><small>' + errorThrown + '</small>');
+            $('#message_submit_content').html('<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>An error occured. <br /><small>' + jqXHR.responseJSON.message + '</small>');
         },
 
         timeout: 120000,
@@ -237,7 +237,7 @@ function approve(id){
         },
         error : function(jqXHR, textStatus, errorThrown) {
             $('#message_general').removeClass('hide').addClass('alert alert-danger alert-dismissible').slideDown().show();
-            $('#message_general_content').html('<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>An error occured. Please reload the page and try again. <br /><small>' + errorThrown + '</small>');
+            $('#message_general_content').html('<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>An error occured. Please reload the page and try again. <br /><small>' + jqXHR.responseJSON.message + '</small>');
         },
 
         timeout: 120000,

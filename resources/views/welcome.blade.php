@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Highscores <a class="pull-right" href="#" onclick="$('#submitModal').modal('show');">Submit Score</a></div>
+                <div class="panel-heading">Highscores <a class="pull-right" onclick="$('#submitModal').modal('show');">Submit Score</a></div>
                 <div class="panel-body">
                     <table id="highscores" class="table table-striped table-bordered"> 
                         <thead>
@@ -85,7 +85,7 @@
                         </div>
                         
                         <div class="col-md-6">
-                            <input id="lname" type="text" class="form-control" name="lname" required autofocus>
+                            <input id="lname" type="text" class="form-control" name="lname" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary pull-right" onclick="event.preventDefault(); submitScore();">
+                            <button type="submit" class="btn btn-primary pull-right" onclick="$('#submitscore')[0].checkValidity(); event.preventDefault(); submitScore();">
                             Submit Score
                             </button>
                         </div>
