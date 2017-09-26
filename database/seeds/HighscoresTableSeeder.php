@@ -22,7 +22,7 @@ class HighscoresTableSeeder extends Seeder
                 'fname'     => $faker->firstName(),
                 'lname'     => $faker->lastName,
                 'd_id'      => $faker->numberBetween(1,3),
-                'score'     => $faker->numberBetween(1,2147483647),
+                'score'     => $faker->numberBetween(1,10000),
                 'approved'  => $faker->numberBetween(0,1)
             ]);
         }

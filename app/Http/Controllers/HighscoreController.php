@@ -16,12 +16,12 @@ class HighscoreController extends Controller
     
     public function index()
     {
-        return Highscore::all()->where('approved', '1')->sortByDesc('score')->load('difficulty');
+        return Highscore::all()->where('approved', '1')->load('difficulty');
     }
     
     public function notApproved()
     {
-        return Highscore::all()->where('approved', '0');
+        return Highscore::all()->load('difficulty');
     }
     
     public function show(Highscore $highscore)

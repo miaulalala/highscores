@@ -11,11 +11,10 @@
     <title>{{ config('app.name', 'Highscores') }}</title>
 
     <!-- Styles -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
-    
-</head>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+ 
+    </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -46,18 +45,17 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ url('/api/login') }}">Login</a></li>
+                            <li><a href="#" onclick="$('#myModal').modal('show');">Login</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ url('/api/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        <a href="#"
+                                            onclick="logout();">
                                             Logout
                                         </a>
 
@@ -78,5 +76,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
