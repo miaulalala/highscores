@@ -20,15 +20,17 @@ For a comprehensive installation guide for Laravel have a look at the [documenta
 
 Create a database and a database user for this app.
 
-Clone the repo
-    git clone https://github.com/miaulalala/highscores.git
+Clone the repo:
+
+    `git clone https://github.com/miaulalala/highscores.git`
 
 Set the permissions:
-    sudo chown -R www-data:www-data /path/to/your/laravel/root/directory
-    sudo find /path/to/your/laravel/root/directory -type f -exec chmod 644 {} \;    
-    sudo find /path/to/your/laravel/root/directory -type d -exec chmod 755 {} \;
-    sudo chgrp -R www-data storage bootstrap/cache
-    sudo chmod -R ug+rwx storage bootstrap/cache
+
+    `sudo chown -R www-data:www-data /path/to/your/laravel/root/directory`
+    `sudo find /path/to/your/laravel/root/directory -type f -exec chmod 644 {} \;`
+    `sudo find /path/to/your/laravel/root/directory -type d -exec chmod 755 {} \;`
+    `sudo chgrp -R www-data storage bootstrap/cache`
+    `sudo chmod -R ug+rwx storage bootstrap/cache`
 
 Run `composer install`.
 
